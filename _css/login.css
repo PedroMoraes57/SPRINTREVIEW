@@ -26,7 +26,6 @@ h1{
 }
 /* Estilização do formulario presente dentro da div container*/
 .form-section {
-    flex: 2;
     padding: 30px;
     display: flex;
     flex-direction: column; /* Alinhamento em coluna*/
@@ -80,7 +79,6 @@ input[type="text"], input[type="password"] {
 }
 /* Estilização da barra lateral presente dentro do container*/
 .sidebar {
-    flex: 1; /* O elementos podem aumentar para preencher o contêiner ou diminuir se necessário */
     background: linear-gradient(to bottom, #645419, #CFB645);
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
