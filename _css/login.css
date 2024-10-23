@@ -1,0 +1,216 @@
+/*Aqui estilizamos o corpo da página inteira*/
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;/* Definimos a fonte para Roboto*/
+    background: linear-gradient(to left, #ffffff, #D5D3CA);/* Background em degrade*/
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+/* Definimos uma estilização para todos os h1 conforme o pedido do cliente*/
+h1{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+/* Estilização da div do login inteira*/
+.container {
+    width: 922px;
+    height: 610px;
+    background-color: #D5D3CA;
+    display: flex;
+    border-radius: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin-left: 520px;
+    margin-top: 80px;
+}
+/* Estilização do formulario presente dentro da div container*/
+.form-section {
+    flex: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Alinhamento em coluna*/
+    justify-content: center;
+    
+}
+/* Estilização de todo h1 presente dentro do formulario*/
+.form-section h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #121211;
+}
+/* Estilização dos inputs presentes na página*/
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 381px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 65px;
+    
+}
+/* Estilização do botão entrar*/
+#entrar {
+    background-color: #e5322a;
+    width: 180px;
+    padding: 13px;
+    border-radius: 30em;
+    font-size: 14px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #D5D3CA;
+    cursor: pointer;
+
+   }
+   /* Animação do botão de entrar*/
+#entrar:hover{
+    background-color: #ac261f;
+}
+
+/* Estilização da página de esqueceu a senha*/
+.forgot-password {
+    margin-top: 10px;
+    color: #121211;
+    text-align: center;
+}
+/* Estilização da barra lateral presente dentro do container*/
+.sidebar {
+    flex: 1; /* O elementos podem aumentar para preencher o contêiner ou diminuir se necessário */
+    background: linear-gradient(to bottom, #645419, #CFB645);
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: #D5D3CA;
+}
+/* Estilização de todo h1 presente da sidebar*/
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+/* Estilização de todo h2 presente da sidebar*/
+.sidebar h2 {
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: center;
+}
+/*Estilização do menu de navegação (header)*/
+header{
+    background-color: #121211;
+    display: flex;
+    height: 12vh;
+    margin-bottom: 5vh;
+    justify-content: space-around;
+    button{
+        color: #121211;
+        background-color: #CFB645;
+        font-size: 2.51vh;
+        margin-top: 3.5vh;
+        display: block;
+        padding: 0.36vw;
+        height: 5.50vh;
+        width: 10.41vw;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 0.3s;
+        font-weight: bold;
+    }
+    button:hover{
+        transform: scale(1.05);
+    }
+    a{
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        color: #D5D3CA;
+        justify-content: center;
+        cursor: pointer;
+        
+    }
+    h1{
+        transition: all 0.3s;
+    }
+    h1:hover{
+        transform: scale(1.05);
+    }
+    img{
+       margin-top: 10px;
+       margin-bottom: 10px;
+       border-radius: 10px;
+       
+    }
+}
+.Cadastrar {
+    margin-top: 10px;
+    cursor: pointer; 
+    position: relative; /* Define a posição relativa para a criação de elementos posicionados dentro do botão */
+    padding: 10px; /* Espaçamento interno de 10px */
+    width: 150px; 
+    font-size: 16px; /* Tamanho da fonte conforme o cliente pediu */
+    color: #D5D3CA;
+    border: 2px solid #D5D3CA; 
+    border-radius: 34px; 
+    background-color: transparent; /* Fundo transparente */
+    font-weight: 600; /* Peso da fonte 600 (semi-negrito) */
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1); /* Transição suave ao passar o mouse */
+    overflow: hidden; /* Conteúdo extra será ocultado */
+}
+
+.Cadastrar::before {
+    content: ''; /* Cria um pseudo-elemento vazio antes do conteúdo do botão */
+    position: absolute; /* Posição absoluta dentro do botão */
+    inset: 0; /* Preenche o espaço completo do elemento pai */
+    margin: auto; /* Centraliza o elemento */
+    width: 50px; /* Largura inicial de 50px */
+    height: 50px; /* Altura inicial de 50px */
+    border-radius: inherit; /* O pseudo-elemento herda o mesmo border-radius do botão */
+    scale: 0; /* Escala inicial 0, ou seja, invisível */
+    z-index: -1; /* Z-index negativo para que fique atrás do conteúdo do botão */
+    background-color: #D5D3CA; /* Cor de fundo do pseudo-elemento */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Transição suave de expansão ao passar o mouse */
+}
+
+.Cadastrar:hover::before {
+    scale: 3; /* Ao passar o mouse, o pseudo-elemento aumenta de tamanho */
+}
+
+.Cadastrar:hover {
+    color: #121211; /* Cor do texto muda para preto ao passar o mouse */
+    scale: 1.1; /* O botão aumenta ligeiramente de tamanho */
+}
+
+.Cadastrar:active {
+    scale: 1; /* Quando o botão é clicado, retorna ao tamanho original */
+}
+  /* Estilizar a mensagem de erro que ira aparecer caso  a verificação no js seja falsa */
+  span{
+    display: none;
+    color: #E5322A;
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 13px;
+}
+/*Estilização do Rodapé*/
+footer{
+    display: flex;
+    background-color: #121211;
+    color: #D5D3CA;
+    height: 8.6vh;
+    justify-content: space-around;
+margin-top: 7vh;
+    p{
+        display: flex;
+        align-items: center;
+    }
+}

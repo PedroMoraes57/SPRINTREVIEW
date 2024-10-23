@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #D5D3CA 80%, #FFFFFF);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header {
+    background-color: #121211;
+    display: flex;
+    height: 12vh;
+    margin-bottom: 5vh;
+    justify-content: space-around;
+
+    button {
+        color: #121211;
+        background-color: #CFB645;
+        font-size: 24px;
+        margin-top: 3.5vh;
+        display: block;
+        padding: 0.36vw;
+        height: 5.50vh;
+        width: 10.41vw;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 0.3s;
+        font-weight: bold;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    a {
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        color: #D5D3CA;
+        justify-content: center;
+        cursor: pointer;
+
+    }
+
+    h1 {
+        transition: all 0.3s;
+    }
+
+    h1:hover {
+        transform: scale(1.05);
+    }
+}
+
+footer {
+    display: flex;
+    background-color: #121211;
+    color: #D5D3CA;
+    height: 8vh;
+    justify-content: space-around;
+    margin-top: 25vh;
+
+    p {
+        display: flex;
+        align-items: center;
+    }
+}
+
+main {
+    margin-top: 12vh;
+    margin-left: 15vw;
+    margin-right: 12vw;
+
+    p {
+        margin-bottom: 5vh;
+    }
+
+    h1 {
+        margin-bottom: 1vh;
+    }
+}
+
+.slider{
+    border: 2px solid #121211;
+    margin: 0 auto;
+    width: 1200px;
+    height: 700px;
+    overflow: hidden; /* Para não aparecerem todas as imagens */
+}
+
+.slides{
+    width: 400%; /*400% pois cada imagem corresponde a 100% da tela e há 4 imagens, portanto, só aparecerá uma por vez*/
+    display: flex;
+    height: 700px;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    width: 1200px;
+    height: 700px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width:1200px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #D5D3CA;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child) { /* Atribui a configuração para os botões, com exceção do último (last-child)*/
+    margin-right: 40px;
+}
+
+/*O seletor de irmãos serve para que o código "procure" irmãos de determinado bloco, ou seja, filhos de um mesmo pai/container, mesmo que estejam distantes no código. Nesse caso, os radio são irmãos pois são filhos do mesmo pai, o container slides */
+
+
+/* Primeiramente selecionei o radio1 e defini que quando ele estiver marcado, sua margem esquerda
+será dada como 0, em relação ao primeiro elemento, ou seja, mostrará a primeira imagem*/
+#radio1:checked ~ .first{ 
+    margin-left: 0;
+}
+
+/*Já para mostrar a segunda imagem, quando o radio2 estiver marcado, a margem esquerda irá diminuir em 25% (espaço pra que uma imagem ocupe o container), fazendo com que a imagem2 assuma a posição do container*/
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+/*O seletor ~ (de irmãos) serve para definir que mesmo que hajam imagens entre as outras selecionadas, será considerado o irmão .first, ou seja a primeira imagem, para calcular o deslocamento da margem*/
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{ /*Define configurações para cada div dentro de navigation auto*/
+    border: 2px solid #121211;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navigation-auto { /*Define configurações para o navigation auto como um todo*/
+    position: absolute;
+    width: 1200px;
+    margin-top: 660px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+/*Quando o radio1 estiver marcado, o autobtn1, dentro do navigation auto mudará a cor de seu fundo para essa, e então, manterá essa cor aplicada*/
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #E5322A;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #E5322A; 
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #E5322A;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #E5322A;
+}
+
+#comunicacao{
+    background-color: #CFB645;
+    text-decoration: none;
+    border: 1px solid #121211;
+    color: #121211;
+    margin-right: 40px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#comunicacao:hover{
+    background-color: #d9bc3f;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <link rel="stylesheet" href="/_css/cadastrar.css"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="_img/favicon-16x16.png">
+    <script src="/_javascript/cadastrar.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="/_img/unnamed.png" alt="">
+        <a href="#">
+            <h1 class="h1Cab">Home</h1>
+        </a>
+        <a href="#">
+            <h1 class="h1Cab">Eventos Esportivos</h1>
+        </a>
+        <a href="#">
+            <h1 class="h1Cab">Festas</h1>
+        </a>
+        <button>Login/Cadastrar</button>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h1>Bem vindo de volta estudante!</h1>
+            <h2>Volte para a página de login caso ja tenha uma conta</h2>
+            <a href="/paginalogincadastro/login.html" style="text-decoration: none;"><button class="Cadastrar">Fazer Login</button></a>
+        </div>
+        <div class="form-section">
+
+            <h1>Fazer Cadastro</h1>
+            <form method="get" action="/paginalogincadastro/confirmação.html">
+                <input type="text" placeholder="Digite seu nome aqui" id="nome" oninput="inputNome()" required>
+                <span id="avisoNome">Digite um nome válido</span>
+                <input type="email"  id="email" placeholder="Digite seu email educacional aqui" oninput="inputEmail()" required>
+                <span id="avisoEmail">Digite um email válido</span>
+                <input type="password" placeholder="Digite sua senha aqui" id="senha" oninput="inputSenha()" required>
+                <span id="avisoSenha">Digite uma senha válida</span>
+                <button type="submit" id="entrar">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>Todos os direitos reservados ©</p>
+</footer>
+
+</body>
+</html>

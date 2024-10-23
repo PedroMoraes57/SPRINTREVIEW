@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1{
+    font-size: 2.51vh;
+    font-weight: bold;
+}
+header{
+    background-color: #121221;
+    display: flex;
+    height: 12vh;
+    margin-bottom: 5vh;
+    justify-content: space-around;
+    button {
+        color: #121211;
+        background-color: #CFB645;
+        font-size: 2.51vh;
+        display: block;
+        padding: 0.36vw;
+        height: 5.24vh;
+        width: 10.41vw;
+        border: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    button:hover{
+        transform: scale(1.05);
+    }
+
+    a{
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        color: #D5D3CA;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    a:hover{
+        transform: scale(1.05);
+    }
+}
+main{
+    display: flex;
+     justify-content:center;
+     align-items: center;
+ 
+   img{
+     width: 73vh;
+     height: 33vh;
+     display: flex;
+     justify-content:center;
+     align-items: center;
+     margin-left: 35px;
+     margin-top: 35px;
+     margin-right: 400px;
+   }
+}
+div{
+    background: linear-gradient(to left, #645419, #CFB645);
+height: 40vh;
+width: 80vh;
+margin-top: 50px;
+}
+footer{
+    display: flex;
+    background-color: #121211;
+    color: #D5D3CA;
+    height: 8vh;
+    justify-content: space-around;
+    margin-top: 5vh;
+    p{
+        display: flex;
+        align-items: center;
+    }
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+#leo{
+    text-align: left;
+    margin-left: 20vw;
+}
+h1{
+    text-align: center;
+}
